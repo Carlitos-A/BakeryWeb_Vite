@@ -4,6 +4,7 @@ export default function Footer() {
   return (
     <footer className="pt-4 pb-3">
       <div className="container text-center">
+        
         {/* Navegación */}
         <nav className="mb-3">
           <ul className="list-unstyled mb-0">
