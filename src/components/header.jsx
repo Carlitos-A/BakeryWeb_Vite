@@ -1,5 +1,6 @@
 import React from 'react'
-import { catalogoItems } from '../constantes/catalogoItems'; 
+import { catalogoItems } from '../constantes/catalogoItems';
+import CartIcon from './CartIcon';
 
 export default function Header() {
 
@@ -67,6 +68,9 @@ export default function Header() {
             </li>
           </ul>
         </div >
+        <div className="ms-3">
+          <CartIcon />
+        </div>
       </div>
     </nav >
   );

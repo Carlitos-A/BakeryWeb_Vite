@@ -8,36 +8,25 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import React, { useState, useEffect } from 'react';
-
-
+import EmblaCarousel from '../components/EmblaCarousel'
+import '../styles/embla.css'
 
 
 
 export default function App() {
-  const [startIndex, setStartIndex] = useState(0);
-  const visibleCount = 3;
+
+  const [startIndex, setIndex] = useState(0);
   const total = masVendidos.length;
+  const SLIDE_COUNT = 3;
+  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setStartIndex((prev) => (prev + 1) % total);
-    }, 2000); 
-      return () => clearInterval(interval);
-    }, [total]);
-
-  const visibleProducts = [];
-  
-  for (let i = 0; i < visibleCount; i++) {
-    visibleProducts.push(masVendidos[(startIndex + i) % total]);
-  }
+  const OPTIONS = { align: 'start' }
 
 
 
   return (
     <div className="d-flex flex-column min-vh-100">
-      <Header />
-
-      <hr />
+      <Header/>
 
       {/* Hero */}
       <div
@@ -81,47 +70,9 @@ export default function App() {
         <h2 className="text-center mb-4">Productos más vendidos</h2>
 
         <section>
-          {/* <div className="container py-5">
-            <div className="row">
-              {masVendidos.map((p) => (
-                <div key={p.id} className="col-md-12 col-lg-4 mb-4 mb-lg-0">
-                  <div className="card h-100">
-                    <img src={p.img} className="card-img-top" alt={p.alt} />
-                    <div className="card-body d-flex flex-column">
-                      <div className="d-flex justify-content-between">
-                        <p className="small">
-                          <a href="#" className="text-muted">
-                            {p.category}
-                          </a>
-                        </p>
-                        <p className="small text-danger">
-                          <s>{p.originalPrice}</s>
-                        </p>
-                      </div>
-
-                      <div className="d-flex justify-content-between mb-3 align-items-center mt-auto">
-                        <h5 className="mb-0">{p.title}</h5>
-                        <h5 className="text-dark mb-0">{p.price}</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div> */}
-          <div className="d-flex gap-3 overflow-hidden my-5">
-            {visibleProducts.map((p) => (
-              <div key={p.id} className="card" style={{ minWidth: '30%' }}>
-                <img src={p.img} className="card-img-top" alt={p.alt} />
-                <div className="card-body">
-                  <h5>{p.title}</h5>
-                  <p>{p.price}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         </section>
-
+        <hr />
         <h2 className="text-center mb-4">Reseñas de clientes</h2>
         <div className="d-flex flex-column gap-3">
           {reviews.map((r) => (
@@ -133,10 +84,10 @@ export default function App() {
             </div>
           ))}
         </div>
-
+        <hr /> 
       </main>
 
       <Footer />
-    </div>
+    </div >
   )
 }
