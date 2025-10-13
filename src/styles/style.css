@@ -380,3 +380,13 @@
     height: 100%;
     /* Asegura que todas las cards tengan misma altura */
   }
+
+  .list-group-item.active {
+    background-color: #dfd2ba;
+    color: rgb(0, 0, 0);
+    border: 1px solid #b47e57;
+  }
+
+  .bg-custom {
+    color: #ffffff;
+  }

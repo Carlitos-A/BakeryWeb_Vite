@@ -13,7 +13,17 @@ export const CartProvider = ({ children }) => {
   }, [cart]);
 
   const addToCart = (product) => {
-    setCart((prev) => [...prev, product]);
+    setCart((prev) => {
+      const existing = prev.find((item) => item.id === product.id);
+      if (existing) {
+        return prev.map((item) =>
+          item.id === product.id
+            ? { ...item, cantidad: (item.cantidad || 1) + 1 }
+            : item
+        );
+      }
+      return [...prev, { ...product, cantidad: 1 }];
+    });
   };
 
   const removeFromCart = (id) => {
