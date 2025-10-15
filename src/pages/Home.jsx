@@ -27,7 +27,7 @@ export default function App() {
 
   return (
     <div className="d-flex flex-column min-vh-100">
-      <Header/>
+
 
       {/* Hero */}
       <div
@@ -87,8 +87,6 @@ export default function App() {
         </div>
         <hr /> 
       </main>
-
-      <Footer />
     </div >
   )
 }

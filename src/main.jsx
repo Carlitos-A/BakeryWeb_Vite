@@ -9,6 +9,10 @@ import './styles/style.css'
 import Home from './pages/Home'
 import CartPage from './pages/CartPage'
 import Catalogo from './pages/catalogo' 
+import Login from './pages/Login'
+import Registro from './pages/Registro'
+import Header from "./components/header";
+import Footer from './components/footer';
 import { CartProvider } from './components/CartContext'
 
 
@@ -20,14 +24,18 @@ root.render(
     <React.StrictMode>
         <CartProvider>
             <BrowserRouter>
+             <Header />
                 <Routes>
                     
                     <Route path="/" element={<Home />} />
                     <Route path="/cart" element={<CartPage />} />
                     <Route path="/catalogo" element={<Catalogo />} />
                     <Route path="/catalogo/:categoria" element={<Catalogo />} />
+                    <Route path="/Login" element={<Login/>}/>
+                    <Route path="/Registro" element={<Registro/>}/>
 
                 </Routes>
+                     <Footer />
             </BrowserRouter>
         </CartProvider>
     </React.StrictMode>)

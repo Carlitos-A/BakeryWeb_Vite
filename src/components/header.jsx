@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 
 
 export default function Header() {
-
+  const logueado = localStorage.getItem("logueado") === "true";
+  const user = localStorage.getItem("usuario");
 
   return (
     <nav className="navbar navbar-expand-lg shadow-sm position-relative">
@@ -68,6 +69,41 @@ export default function Header() {
               <a className="nav-link" href="comunidad.html">Comunidad</a>
             </li>
           </ul>
+
+
+                 {/* Menu de Login y Registro*/}
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            {!logueado && (
+              <>
+                <li className="nav-item">
+                  <Link to="/login" className="nav-link">Login</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/Registro" className="nav-link">Registrarse</Link>
+                </li>
+              </>
+            )}
+
+            {logueado && (
+              <>
+                <li className="nav-item">
+                  <Link to="/" className="nav-link" id="btnLogout">Logout {user}</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/edit_perfil" className="nav-link" >Editar Perfil</Link>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link position-relative" href="carrito.html">
+                    <i className="bi bi-cart3" style={{ fontSize: "1.5rem" }}></i>
+                  </a>
+                </li>
+              </>
+            )}
+          </ul>
+
+
+          
+
         </div >
         <div className="ms-3">
           <CartIcon />
