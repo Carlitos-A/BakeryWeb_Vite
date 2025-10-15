@@ -1,6 +1,8 @@
 import React from 'react'
 import { catalogoItems } from '../constantes/catalogoItems';
 import CartIcon from './CartIcon';
+import { Link } from "react-router-dom";
+
 
 export default function Header() {
 
@@ -9,7 +11,7 @@ export default function Header() {
     <nav className="navbar navbar-expand-lg shadow-sm position-relative">
       <div className="container-fluid">
         {/* Marca */}
-        <a className="navbar-brand" href="lander.html">
+        <a className="navbar-brand" href="/">
           <img src="assets/img/icons/logo.png" alt="Logo" height="80" />
         </a>
 
@@ -31,21 +33,20 @@ export default function Header() {
           {/* Menú central */}
           <ul className="navbar-nav mb-2 mb-lg-0 central-menu">
             <li className="nav-item">
-              <a className="nav-link" href="lander.html">
+              <a className="nav-link" href="/">
                 Inicio
               </a>
             </li>
 
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="categoria.html" role="button">
-                Catálogo
-              </a>
+              <Link to="/catalogo" className="nav-link dropdown-toggle">
+                Catálogo</Link>
               <ul className="dropdown-menu">
                 {catalogoItems.map((item) => (
                   <li key={item.id}>
-                    <a className="dropdown-item" href={item.href}>
+                    <Link className="dropdown-item" to={item.href}>
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

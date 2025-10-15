@@ -13,6 +13,7 @@ import '../styles/embla.css'
 
 
 
+
 export default function App() {
 
   const [startIndex, setIndex] = useState(0);
@@ -65,7 +66,7 @@ export default function App() {
 
       </div>
 
-      {/* Productos y reseñas */}
+      {/* reseñas */}
       <main className="container my-5">
         <h2 className="text-center mb-4">Productos más vendidos</h2>
 

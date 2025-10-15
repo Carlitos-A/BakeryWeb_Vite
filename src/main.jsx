@@ -8,7 +8,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import './styles/style.css'
 import Home from './pages/Home'
 import CartPage from './pages/CartPage'
-
+import Catalogo from './pages/catalogo' 
 import { CartProvider } from './components/CartContext'
 
 
@@ -21,8 +21,12 @@ root.render(
         <CartProvider>
             <BrowserRouter>
                 <Routes>
+                    
                     <Route path="/" element={<Home />} />
                     <Route path="/cart" element={<CartPage />} />
+                    <Route path="/catalogo" element={<Catalogo />} />
+                    <Route path="/catalogo/:categoria" element={<Catalogo />} />
+
                 </Routes>
             </BrowserRouter>
         </CartProvider>
