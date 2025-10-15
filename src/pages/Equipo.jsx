@@ -18,14 +18,14 @@ export default function Equipo() {
             height: "100vh"
           }}
         >
-          <div className="hero text-center text-white">
+          <div className=" text-black">
             <h1>Quiénes Somos</h1>
           </div>
         </div>
 
         {/* Sección de contenido */}
         <div className="container my-5">
-          <h2 className="text-center mb-4">Equipo de Trabajo</h2>
+          <h2 className="text-center text-black">Equipo de Trabajo</h2>
           <p className="text-muted lh-lg">
             El corazón de la Pastelería Mil Sabores está formado por un equipo diverso de reposteros, pasteleros, diseñadores de tortas y personal de atención al cliente que comparten una misma pasión: crear experiencias inolvidables.
           </p>

@@ -10,11 +10,11 @@ export default function NuestraHistoria() {
 
       <main className="flex-grow-1">
         <section className="container-fluid my-5">
-          <h2 className="text-center mb-5">Nuestra Historia</h2>
+          <h2 className="text-center text-black">Nuestra Historia</h2>
           <div className="timeline">
 
             {/* 1975 – Fundación */}
-            <div className="timeline-item left">
+            <div className="timeline-item left text-black">
               <div className="content1">
                 <h4>1975 – Fundación de la Pastelería</h4>
                 <p>
@@ -28,7 +28,7 @@ export default function NuestraHistoria() {
             </div>
 
             {/* 1995 – Récord Guinness */}
-            <div className="timeline-item right">
+            <div className="timeline-item right text-black">
               <div className="image">
                 <img src="/productos/record.jpeg" alt="Record Guinness" className="img-fluid rounded" />
               </div>
@@ -45,7 +45,7 @@ export default function NuestraHistoria() {
             </div>
 
             {/* 2000 – Expansión */}
-            <div className="timeline-item left">
+            <div className="timeline-item left text-black">
               <div className="content1">
                 <h4>2000 – Expansión del catálogo</h4>
                 <p>
@@ -62,7 +62,7 @@ export default function NuestraHistoria() {
             </div>
 
             {/* 2010 – Innovación tecnológica */}
-            <div className="timeline-item right">
+            <div className="timeline-item right text-black">
               <div className="image">
                 <img src="/productos/prep.jpg" alt="prep" className="img-fluid rounded" />
               </div>
@@ -79,7 +79,7 @@ export default function NuestraHistoria() {
             </div>
 
             {/* 2023 – Proyecto e-commerce */}
-            <div className="timeline-item left">
+            <div className="timeline-item left text-black">
               <div className="content1">
                 <h4>2023 – Proyecto de e-commerce</h4>
                 <p>
@@ -96,7 +96,7 @@ export default function NuestraHistoria() {
             </div>
 
             {/* 2025 – 50° Aniversario */}
-            <div className="timeline-item right">
+            <div className="timeline-item right text-black">
               <div className="image">
                 <img src="/productos/torta_50a.png" alt="50a" className="img-fluid rounded" />
               </div>

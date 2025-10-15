@@ -1,24 +1,14 @@
 import React from 'react'
-import { catalogoItems } from '../constantes/catalogoItems';
-import CartIcon from './CartIcon';
-<<<<<<< HEAD
-=======
-import { Link } from "react-router-dom";
-
->>>>>>> 788ca28 (Se crean los enlaces para Equipo, Nuestra historia y PRocesos, de forma parcial, falta personalziar los estilos de css aun)
+import { catalogoItems } from '../constantes/catalogoItems'
+import CartIcon from './CartIcon'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
-
-
   return (
     <nav className="navbar navbar-expand-lg shadow-sm position-relative">
       <div className="container-fluid">
         {/* Marca */}
-<<<<<<< HEAD
-        <a className="navbar-brand" href="lander.html">
-=======
         <a className="navbar-brand" href="/">
->>>>>>> 788ca28 (Se crean los enlaces para Equipo, Nuestra historia y PRocesos, de forma parcial, falta personalziar los estilos de css aun)
           <img src="assets/img/icons/logo.png" alt="Logo" height="80" />
         </a>
 
@@ -40,88 +30,65 @@ export default function Header() {
           {/* Menú central */}
           <ul className="navbar-nav mb-2 mb-lg-0 central-menu">
             <li className="nav-item">
-<<<<<<< HEAD
-              <a className="nav-link" href="lander.html">
-=======
               <a className="nav-link" href="/">
->>>>>>> 788ca28 (Se crean los enlaces para Equipo, Nuestra historia y PRocesos, de forma parcial, falta personalziar los estilos de css aun)
                 Inicio
               </a>
             </li>
 
             <li className="nav-item dropdown">
-<<<<<<< HEAD
-              <a className="nav-link dropdown-toggle" href="categoria.html" role="button">
-                Catálogo
-              </a>
-              <ul className="dropdown-menu">
-                {catalogoItems.map((item) => (
-                  <li key={item.id}>
-                    <a className="dropdown-item" href={item.href}>
-                      {item.name}
-                    </a>
-=======
               <Link to="/catalogo" className="nav-link dropdown-toggle">
-                Catálogo</Link>
+                Catálogo
+              </Link>
               <ul className="dropdown-menu">
                 {catalogoItems.map((item) => (
                   <li key={item.id}>
                     <Link className="dropdown-item" to={item.href}>
                       {item.name}
                     </Link>
->>>>>>> 788ca28 (Se crean los enlaces para Equipo, Nuestra historia y PRocesos, de forma parcial, falta personalziar los estilos de css aun)
                   </li>
                 ))}
               </ul>
             </li>
 
-
             <li className="nav-item dropdown">
-<<<<<<< HEAD
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                Sobre Nosotros
-              </a>
-              <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="nuestra-historia.html">Nuestra Historia</a></li>
-                <li><a className="dropdown-item" href="quienes_somos.html">Equipo</a></li>
-                <li><a className="dropdown-item" href="procesos.html">Procesos</a></li>
-              </ul>
-            </li>
-
-=======
-              <Link to="#" className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+              <Link
+                to="#"
+                className="nav-link dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
                 Sobre Nosotros
               </Link>
               <ul className="dropdown-menu">
                 <li>
-                  <Link className="dropdown-item" to="/NuestraHistoria">
+                  <Link className="dropdown-item" to="/nuestrahistoria">
                     Nuestra Historia
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/Equipo">
+                  <Link className="dropdown-item" to="/equipo">
                     Equipo
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/Procesos">
+                  <Link className="dropdown-item" to="/procesos">
                     Procesos
                   </Link>
                 </li>
               </ul>
             </li>
-
-            
->>>>>>> 788ca28 (Se crean los enlaces para Equipo, Nuestra historia y PRocesos, de forma parcial, falta personalziar los estilos de css aun)
             <li className="nav-item">
-              <a className="nav-link" href="comunidad.html">Comunidad</a>
+              <a className="nav-link" href="/comunidad">
+                Comunidad
+              </a>
             </li>
           </ul>
-        </div >
+        </div>
+
         <div className="ms-3">
           <CartIcon />
         </div>
       </div>
-    </nav >
-  );
+    </nav>
+  )
 }

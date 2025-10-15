@@ -12,18 +12,21 @@ export default function Procesos() {
         <div
           className="w-100 d-flex flex-column justify-content-center align-items-center text-center"
           style={{
-        background: "url('/assets/img/fondo/p_pastel.jpg') center/cover no-repeat",
-  height: "100vh",
+            background: "url('/assets/img/fondo/p_pastel.jpg') center/cover no-repeat",
+            height: "100vh",
           }}
         >
-          <h1 className="text-dark fw-bold">Procesos</h1>
+          <div className="col-md-8 col-lg-6 bg-dark bg-opacity-50 p-5 rounded">
+            <h1 className="mb-4 display-4 fw-bold text-white text-center">Procesos</h1>
+          </div>
+
         </div>
         <div className="container my-5">
-          <h2 className="text-center mb-4">Nuestros Procesos</h2>
+          <h2 className="text-center text-black">Nuestros Procesos</h2>
           <p className="text-muted lh-lg">
             Cada producto que elaboramos pasa por un proceso cuidado y transparente:
           </p>
-          <ul className="list-unstyled lh-lg">
+          <ul className="text-black">
             <li>
               <strong>Selección de ingredientes:</strong> trabajamos con proveedores locales
               para garantizar frescura y calidad en frutas, harinas y chocolates.

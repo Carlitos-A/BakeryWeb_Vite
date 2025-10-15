@@ -6,45 +6,33 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import './styles/style.css'
+
 import Home from './pages/Home'
 import CartPage from './pages/CartPage'
-<<<<<<< HEAD
-
-import { CartProvider } from './components/CartContext'
-
-=======
-import Catalogo from './pages/catalogo' 
+import Catalogo from './pages/catalogo'
 import { CartProvider } from './components/CartContext'
 import Procesos from './pages/Procesos'
 import NuestraHistoria from './pages/NuestraHistoria'
 import Equipo from './pages/Equipo'
->>>>>>> 788ca28 (Se crean los enlaces para Equipo, Nuestra historia y PRocesos, de forma parcial, falta personalziar los estilos de css aun)
-
-
+import Comunidad from './pages/Comunidad'
 
 const root = createRoot(document.getElementById('root'))
 
 root.render(
-    <React.StrictMode>
-        <CartProvider>
-            <BrowserRouter>
-                <Routes>
-<<<<<<< HEAD
-                    <Route path="/" element={<Home />} />
-                    <Route path="/cart" element={<CartPage />} />
-=======
-                    
-                    <Route path="/" element={<Home />} />
-                    <Route path="/cart" element={<CartPage />} />
-                    <Route path="/catalogo" element={<Catalogo />} />
-                    <Route path="/catalogo/:categoria" element={<Catalogo />} />
-                    <Route path="/procesos" element={<Procesos />} />
-                    <Route path="/nuestrahistoria" element={<NuestraHistoria />} />
-                    <Route path="/equipo" element={<Equipo />} />
-                    
-
->>>>>>> 788ca28 (Se crean los enlaces para Equipo, Nuestra historia y PRocesos, de forma parcial, falta personalziar los estilos de css aun)
-                </Routes>
-            </BrowserRouter>
-        </CartProvider>
-    </React.StrictMode>)
+  <React.StrictMode>
+    <CartProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/catalogo" element={<Catalogo />} />
+          <Route path="/catalogo/:categoria" element={<Catalogo />} />
+          <Route path="/procesos" element={<Procesos />} />
+          <Route path="/nuestrahistoria" element={<NuestraHistoria />} />
+          <Route path="/equipo" element={<Equipo />} />
+          <Route path='/comunidad' element = {<Comunidad/>}/>
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
+  </React.StrictMode>
+)

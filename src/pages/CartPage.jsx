@@ -5,11 +5,10 @@ import { Link } from "react-router-dom";
 export default function CartPage() {
   const { cart, removeFromCart, clearCart, updateQuantity } = useCart();
 
-<<<<<<< HEAD
-  const total = cart.reduce((acc, item) => acc + (item.precio || 0) * (item.cantidad || 1), 0);
-=======
-  const total = cart.reduce((acc, item) => acc + (item.price || 0) * (item.cantidad || 1), 0);
->>>>>>> 788ca28 (Se crean los enlaces para Equipo, Nuestra historia y PRocesos, de forma parcial, falta personalziar los estilos de css aun)
+  const total = cart.reduce(
+    (acc, item) => acc + (item.precio || 0) * (item.cantidad || 1),
+    0
+  );
 
   return (
     <div className="container py-5">
@@ -45,45 +44,30 @@ export default function CartPage() {
                 {cart.map((item, index) => (
                   <tr key={index}>
                     <td className="d-flex align-items-center">
-<<<<<<< HEAD
                       {item.imagen && (
                         <img
                           src={item.imagen}
                           alt={item.nombre}
-=======
-                      {item.img && (
-                        <img
-                          src={item.img}
-                          alt={item.title}
->>>>>>> 788ca28 (Se crean los enlaces para Equipo, Nuestra historia y PRocesos, de forma parcial, falta personalziar los estilos de css aun)
                           width="60"
                           height="60"
                           className="me-3 rounded"
                         />
                       )}
-<<<<<<< HEAD
                       <span>{item.nombre}</span>
                     </td>
                     <td>${item.precio}</td>
-=======
-                      <span>{item.title}</span>
-                    </td>
-                    <td>${item.price}</td>
->>>>>>> 788ca28 (Se crean los enlaces para Equipo, Nuestra historia y PRocesos, de forma parcial, falta personalziar los estilos de css aun)
                     <td>
                       <input
                         type="number"
                         min="1"
                         value={item.cantidad || 1}
                         className="form-control form-control-sm w-50"
-                        onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
+                        onChange={(e) =>
+                          updateQuantity(item.id, parseInt(e.target.value))
+                        }
                       />
                     </td>
-<<<<<<< HEAD
                     <td>${(item.precio * (item.cantidad || 1)).toFixed(2)}</td>
-=======
-                    <td>${(item.price * (item.cantidad || 1)).toFixed(2)}</td>
->>>>>>> 788ca28 (Se crean los enlaces para Equipo, Nuestra historia y PRocesos, de forma parcial, falta personalziar los estilos de css aun)
                     <td>
                       <button
                         className="btn btn-outline-danger btn-sm"
