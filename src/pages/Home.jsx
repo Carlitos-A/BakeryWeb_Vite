@@ -11,8 +11,11 @@ import React, { useState, useEffect } from 'react';
 import EmblaCarousel from '../components/EmblaCarousel'
 import '../styles/embla.css'
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 788ca28 (Se crean los enlaces para Equipo, Nuestra historia y PRocesos, de forma parcial, falta personalziar los estilos de css aun)
 export default function App() {
 
   const [startIndex, setIndex] = useState(0);
@@ -22,8 +25,11 @@ export default function App() {
 
   const OPTIONS = { align: 'start' }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 788ca28 (Se crean los enlaces para Equipo, Nuestra historia y PRocesos, de forma parcial, falta personalziar los estilos de css aun)
   return (
     <div className="d-flex flex-column min-vh-100">
       <Header/>
@@ -65,7 +71,11 @@ export default function App() {
 
       </div>
 
+<<<<<<< HEAD
       {/* Productos y reseñas */}
+=======
+      {/* reseñas */}
+>>>>>>> 788ca28 (Se crean los enlaces para Equipo, Nuestra historia y PRocesos, de forma parcial, falta personalziar los estilos de css aun)
       <main className="container my-5">
         <h2 className="text-center mb-4">Productos más vendidos</h2>
 
