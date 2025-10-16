@@ -44,17 +44,17 @@ function Registrar() {
             />
           </div>
 
-          <div className="mb-3">
-            <label htmlFor="contrasena" className="form-label">Contraseña</label>
-            <input type="password" className="form-control" id="contrasena" placeholder="Contraseña" minlength="6"
-              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Debe contener más de 6 caracteres, incluyendo número, mayúscula y minúscula" required />
+           <div className="mb-3">
+            <label htmlFor="codigoDesc" className="form-label">Codigo de descuento</label>
+            <input type="text" className="form-control" id="codigoDesc" required placeholder="Codigo Descuento"
+              pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3" maxlength="30" title="Solo letras, números o guión" />
           </div>
 
 
           <div className="mb-3">
-            <label htmlFor="codigoDesc" className="form-label">Codigo de descuento</label>
-            <input type="text" className="form-control" id="codigoDesc" required placeholder="Codigo Descuento"
-              pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3" maxlength="30" title="Solo letras, números o guión" />
+            <label htmlFor="contrasena" className="form-label">Contraseña</label>
+            <input type="password" className="form-control" id="contrasena" placeholder="Contraseña" minlength="6"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Debe contener más de 6 caracteres, incluyendo número, mayúscula y minúscula" required />
           </div>
 
           <div className="mb-4">
