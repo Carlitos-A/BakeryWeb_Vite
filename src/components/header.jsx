@@ -70,7 +70,7 @@ export default function Header() {
               </li>
 
               <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                <a className="nav-link dropdown-toggle">
                   Sobre Nosotros
                 </a>
                 <ul className="dropdown-menu">
@@ -109,9 +109,21 @@ export default function Header() {
                       Cerrar Sesion ({user})
                     </button>
                   </li>
+
                   <li className="nav-item">
                     <Link to="/edit_perfil" className="nav-link">Editar Perfil</Link>
                   </li>
+
+                  <li className="nav-item">
+                    <Link to="/edit_perfil" className="nav-link">
+                    <i class="bi bi-bell-fill"></i>
+                    <span class="badge text-bg-danger">4</span>
+                    </Link>
+                  </li>
+
+
+
+
                 </>
               )}
             </ul>
