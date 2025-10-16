@@ -9,7 +9,7 @@ export default function CartPage() {
 
   return (
     <div className="container py-5">
-      <h2 className="mb-5 text-center display-5 fw-bold">🛍️ Tu Carrito</h2>
+      <h2 className="mb-5 text-center display-5 fw-bold"> Tu Carrito</h2>
 
       {cart.length === 0 ? (
         <div className="d-flex flex-column justify-content-center align-items-center py-5">
