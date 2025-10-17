@@ -1,12 +1,10 @@
 import React from 'react'
-import { catalogoItems } from '../constantes/catalogoItems';
-import CartIcon from './CartIcon';
-import { Link } from "react-router-dom";
+import { catalogoItems } from '../constantes/catalogoItems'
+import CartIcon from './CartIcon'
+import { Link } from 'react-router-dom'
 
 
 export default function Header() {
-
-
   return (
     <nav className="navbar navbar-expand-lg shadow-sm position-relative">
       <div className="container-fluid">
@@ -40,6 +38,8 @@ export default function Header() {
 
             <li className="nav-item dropdown">
               <Link to="/catalogo" className="nav-link dropdown-toggle">
+                Catálogo
+              </Link>
                 Catálogo</Link>
               <ul className="dropdown-menu">
                 {catalogoItems.map((item) => (
@@ -52,27 +52,45 @@ export default function Header() {
               </ul>
             </li>
 
-
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <Link
+                to="#"
+                className="nav-link dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
                 Sobre Nosotros
-              </a>
+              </Link>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="nuestra-historia.html">Nuestra Historia</a></li>
-                <li><a className="dropdown-item" href="quienes_somos.html">Equipo</a></li>
-                <li><a className="dropdown-item" href="procesos.html">Procesos</a></li>
+                <li>
+                  <Link className="dropdown-item" to="/nuestrahistoria">
+                    Nuestra Historia
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/equipo">
+                    Equipo
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/procesos">
+                    Procesos
+                  </Link>
+                </li>
               </ul>
             </li>
-
             <li className="nav-item">
-              <a className="nav-link" href="comunidad.html">Comunidad</a>
+              <a className="nav-link" href="/comunidad">
+                Comunidad
+              </a>
             </li>
           </ul>
-        </div >
+        </div>
+
         <div className="ms-3">
           <CartIcon />
         </div>
       </div>
-    </nav >
-  );
+    </nav>
+  )
 }

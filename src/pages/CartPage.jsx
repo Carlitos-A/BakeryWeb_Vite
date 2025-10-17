@@ -59,7 +59,9 @@ export default function CartPage() {
                         min="1"
                         value={item.cantidad || 1}
                         className="form-control form-control-sm w-50"
-                        onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
+                        onChange={(e) =>
+                          updateQuantity(item.id, parseInt(e.target.value))
+                        }
                       />
                     </td>
                     <td>${(item.price * (item.cantidad || 1)).toFixed(2)}</td>

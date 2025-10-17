@@ -379,6 +379,7 @@
     /* Empuja el botón hacia abajo */
     height: 100%;
     /* Asegura que todas las cards tengan misma altura */
+
   }
 
   .list-group-item.active {
@@ -389,4 +390,5 @@
 
   .bg-custom {
     color: #ffffff;
+}
   }
