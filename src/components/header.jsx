@@ -3,6 +3,7 @@ import { catalogoItems } from '../constantes/catalogoItems'
 import CartIcon from './CartIcon'
 import { Link } from 'react-router-dom'
 
+
 export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg shadow-sm position-relative">
@@ -39,6 +40,7 @@ export default function Header() {
               <Link to="/catalogo" className="nav-link dropdown-toggle">
                 Catálogo
               </Link>
+                Catálogo</Link>
               <ul className="dropdown-menu">
                 {catalogoItems.map((item) => (
                   <li key={item.id}>

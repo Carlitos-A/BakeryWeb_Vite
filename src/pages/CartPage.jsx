@@ -5,10 +5,7 @@ import { Link } from "react-router-dom";
 export default function CartPage() {
   const { cart, removeFromCart, clearCart, updateQuantity } = useCart();
 
-  const total = cart.reduce(
-    (acc, item) => acc + (item.precio || 0) * (item.cantidad || 1),
-    0
-  );
+  const total = cart.reduce((acc, item) => acc + (item.price || 0) * (item.cantidad || 1), 0);
 
   return (
     <div className="container py-5">
@@ -44,18 +41,18 @@ export default function CartPage() {
                 {cart.map((item, index) => (
                   <tr key={index}>
                     <td className="d-flex align-items-center">
-                      {item.imagen && (
+                      {item.img && (
                         <img
-                          src={item.imagen}
-                          alt={item.nombre}
+                          src={item.img}
+                          alt={item.title}
                           width="60"
                           height="60"
                           className="me-3 rounded"
                         />
                       )}
-                      <span>{item.nombre}</span>
+                      <span>{item.title}</span>
                     </td>
-                    <td>${item.precio}</td>
+                    <td>${item.price}</td>
                     <td>
                       <input
                         type="number"
@@ -67,7 +64,7 @@ export default function CartPage() {
                         }
                       />
                     </td>
-                    <td>${(item.precio * (item.cantidad || 1)).toFixed(2)}</td>
+                    <td>${(item.price * (item.cantidad || 1)).toFixed(2)}</td>
                     <td>
                       <button
                         className="btn btn-outline-danger btn-sm"

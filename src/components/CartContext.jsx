@@ -13,9 +13,6 @@ export const CartProvider = ({ children }) => {
   }, [cart]);
 
   const addToCart = (product) => {
-
-    setCart((prev) => [...prev, product]);
-
     setCart((prev) => {
       const existing = prev.find((item) => item.id === product.id);
       if (existing) {
@@ -27,7 +24,7 @@ export const CartProvider = ({ children }) => {
       }
       return [...prev, { ...product, cantidad: 1 }];
     });
-};
+  };
 
   const removeFromCart = (id) => {
     setCart((prev) => prev.filter((item) => item.id !== id));

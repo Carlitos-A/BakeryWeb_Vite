@@ -9,7 +9,7 @@ import './styles/style.css'
 
 import Home from './pages/Home'
 import CartPage from './pages/CartPage'
-import Catalogo from './pages/catalogo'
+import Catalogo from './pages/catalogo' 
 import { CartProvider } from './components/CartContext'
 import Procesos from './pages/Procesos'
 import NuestraHistoria from './pages/NuestraHistoria'
