@@ -36,7 +36,7 @@ export const productos = [
     originalPrice: 4000,
     price: 3500,
     title: 'Pan Sin Gluten',
-    img: '/assets/img/productos/pan-de-molde-sin-gluten-casero.jpg',
+    img: '/assets/img/productos/pansingluten.jpg',
     alt: 'Pan sin gluten'
   },
   {
@@ -96,7 +96,7 @@ export const productos = [
     originalPrice: 94000,
     price: 47000,
     title: 'Cheesecake Sin Azúcar',
-    img: '/assets/img/productos/Cheesecake frutos del bosque.jpg',
+    img: '/assets/img/productos/cheesesinazucar.jpg',
     alt: 'Cheesecake sin azúcar'
   },
   {
@@ -106,7 +106,7 @@ export const productos = [
     originalPrice: 6000,
     price: 3000,
     title: 'Empanada de Manzana',
-    img: '/assets/img/productos/Empanadillas-de-manzana.jpg',
+    img: '/assets/img/productos/empanadamanzana.jpg',
     alt: 'Empanada de manzana'
   },
   {
@@ -116,7 +116,7 @@ export const productos = [
     originalPrice: 12000,
     price: 6000,
     title: 'Tarta de Santiago',
-    img: '/assets/img/productos/tarta-santiago.jpg',
+    img: '/assets/img/productos/tartasantiago.jpg',
     alt: 'Tarta de Santiago'
   },
   {
@@ -126,7 +126,7 @@ export const productos = [
     originalPrice: 8000,
     price: 4000,
     title: 'Brownie Sin Gluten',
-    img: '/assets/img/productos/brownie.jpg',
+    img: '/assets/img/productos/Brownie.jpg',
     alt: 'Brownie sin gluten'
   },
   {
@@ -146,7 +146,7 @@ export const productos = [
     originalPrice: 9000,
     price: 4500,
     title: 'Galletas Veganas de Avena',
-    img: '/assets/img/productos/galletas-de-avena-veganas.jpg',
+    img: '/assets/img/productos/galletasavena.jpg',
     alt: 'Galletas veganas de avena'
   },
   {
