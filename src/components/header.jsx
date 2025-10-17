@@ -40,7 +40,6 @@ export default function Header() {
               <Link to="/catalogo" className="nav-link dropdown-toggle">
                 Catálogo
               </Link>
-                Catálogo</Link>
               <ul className="dropdown-menu">
                 {catalogoItems.map((item) => (
                   <li key={item.id}>

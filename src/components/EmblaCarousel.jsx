@@ -12,7 +12,6 @@ const EmblaCarousel = ({ options }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
   const { addToCart } = useCart()
 
-  const { addToCart } = useCart();
 
   const {
     prevBtnDisabled,
