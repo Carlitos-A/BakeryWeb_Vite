@@ -1,4 +1,5 @@
 
+
 import Header from '../components/header'
 import Footer from '../components/footer'
 import '../styles/style.css'
@@ -15,35 +16,41 @@ import { Link } from 'react-router-dom'
 
 
 
-
 export default function App() {
-
   const [startIndex, setIndex] = useState(0);
   const total = masVendidos.length;
   const SLIDE_COUNT = 3;
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
-
-  const OPTIONS = { align: 'start' }
-
-
+  const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+  const OPTIONS = { align: 'start' };
 
   return (
     <div className="d-flex flex-column min-vh-100">
-
 
       {/* Hero */}
       <div
         className="w-100 hero-section position-relative"
         aria-label="Imagen de fondo - Bakery"
       >
-        <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
+        <div
+          id="carouselExampleSlidesOnly"
+          className="carousel slide"
+          data-bs-ride="carousel"
+        >
           <div className="carousel-inner">
-            <div className="carousel-item active mj-hero slide-1" data-bs-interval="2000"></div>
-            <div className="carousel-item mj-hero slide-2" data-bs-interval="2000"></div>
-            <div className="carousel-item mj-hero slide-3" data-bs-interval="2000"></div>
+            <div
+              className="carousel-item active mj-hero slide-1"
+              data-bs-interval="2000"
+            ></div>
+            <div
+              className="carousel-item mj-hero slide-2"
+              data-bs-interval="2000"
+            ></div>
+            <div
+              className="carousel-item mj-hero slide-3"
+              data-bs-interval="2000"
+            ></div>
           </div>
         </div>
-
 
         <div className="position-absolute top-50 start-50 translate-middle w-100 d-flex justify-content-center">
           <div className="position-relative d-flex flex-column justify-content-center align-items-center h-100">
@@ -54,7 +61,7 @@ export default function App() {
               <p className="mb-4 text-white text-center">
                 Disfruta de pasteles, tortas y panes recién horneados, elaborados
                 con ingredientes frescos y mucho amor. Haz tu pedido online y
-                recíbelo en la comodidad de tu hogar
+                recíbelo en la comodidad de tu hogar.
               </p>
               <div className="text-center">
                 <a href="Registro" className="btn btn-color btn-lg">
@@ -64,8 +71,6 @@ export default function App() {
             </div>
           </div>
         </div>
-
-
       </div>
 
       {/* reseñas */}
@@ -75,7 +80,9 @@ export default function App() {
         <section>
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         </section>
+
         <hr />
+
         <h2 className="text-center mb-4">Reseñas de clientes</h2>
         <div className="d-flex flex-column gap-3">
           {reviews.map((r) => (
@@ -87,8 +94,10 @@ export default function App() {
             </div>
           ))}
         </div>
-        <hr /> 
+
+        <hr />
       </main>
     </div >
   )
+
 }

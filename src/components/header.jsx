@@ -1,7 +1,9 @@
+
 import React, { useState } from 'react'
 import { catalogoItems } from '../constantes/catalogoItems';
 import CartIcon from './CartIcon';
 import { Link } from "react-router-dom";
+
 
 export default function Header() {
   const logueado = localStorage.getItem("logueado") === "true";
@@ -45,7 +47,6 @@ export default function Header() {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-
           <div className="collapse navbar-collapse" id="navbarContent">
             {/* Menú central */}
             <ul className="navbar-nav mb-2 mb-lg-0 central-menu">
@@ -73,18 +74,29 @@ export default function Header() {
                 <a className="nav-link dropdown-toggle">
                   Sobre Nosotros
                 </a>
-                <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="nuestra-historia.html">Nuestra Historia</a></li>
-                  <li><a className="dropdown-item" href="quienes_somos.html">Equipo</a></li>
-                  <li><a className="dropdown-item" href="procesos.html">Procesos</a></li>
-                </ul>
+               <ul className="dropdown-menu">
+                <li>
+                  <Link className="dropdown-item" to="/nuestrahistoria">
+                    Nuestra Historia
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/equipo">
+                    Equipo
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/procesos">
+                    Procesos
+                  </Link>
+                </li>
+              </ul>
               </li>
 
               <li className="nav-item">
                 <a className="nav-link" href="comunidad.html">Comunidad</a>
               </li>
             </ul>
-
         
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               {!logueado && (
@@ -120,10 +132,6 @@ export default function Header() {
                     <span class="badge text-bg-danger">4</span>
                     </Link>
                   </li>
-
-
-
-
                 </>
               )}
             </ul>
@@ -169,3 +177,4 @@ export default function Header() {
     </>
   );
 }
+

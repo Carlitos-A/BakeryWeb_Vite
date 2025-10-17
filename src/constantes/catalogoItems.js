@@ -6,6 +6,6 @@ export const catalogoItems = [
     { id: "5", name: "Productos Sin Azúcar", href: "/catalogo/productos-sin-azúcar" },
     { id: "6", name: "Pastelería Tradicional", href: "/catalogo/pastelería-tradicional" },
     { id: "7", name: "Productos sin gluten", href: "/catalogo/productos-sin-gluten" },
-    { id: "8", name: "Productos Veganas", href: "/catalogo/productos-veganas" },
+    { id: "8", name: "Productos Veganos", href: "/catalogo/productos-veganos" },
     { id: "9", name: "Tortas Especiales", href: "/catalogo/tortas-especiales" }
 ];
