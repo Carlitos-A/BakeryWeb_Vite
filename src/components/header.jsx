@@ -94,7 +94,7 @@ export default function Header() {
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="comunidad.html">Comunidad</a>
+                <Link to="/comunidad enl" className="nav-link" >Comunidad</Link>
               </li>
             </ul>
         
