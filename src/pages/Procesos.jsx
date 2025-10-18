@@ -7,7 +7,6 @@ import '../styles/style.css';
 export default function Procesos() {
   return (
     <div className="d-flex flex-column min-vh-100 bg-custom">
-      <Header />
       <main className="flex-grow-1">
         <div
           className="w-100 d-flex flex-column justify-content-center align-items-center text-center"
@@ -55,7 +54,6 @@ export default function Procesos() {
           </p>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

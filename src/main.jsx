@@ -10,6 +10,10 @@ import './styles/style.css'
 import Home from './pages/Home'
 import CartPage from './pages/CartPage'
 import Catalogo from './pages/catalogo' 
+import Login from './pages/Login'
+import Registro from './pages/Registro'
+import Header from "./components/header";
+import Footer from './components/footer';
 import { CartProvider } from './components/CartContext'
 import Procesos from './pages/Procesos'
 import NuestraHistoria from './pages/NuestraHistoria'
@@ -19,9 +23,11 @@ import Comunidad from './pages/Comunidad'
 const root = createRoot(document.getElementById('root'))
 
 root.render(
+
   <React.StrictMode>
     <CartProvider>
       <BrowserRouter>
+      <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<CartPage />} />
@@ -31,8 +37,12 @@ root.render(
           <Route path="/nuestrahistoria" element={<NuestraHistoria />} />
           <Route path="/equipo" element={<Equipo />} />
           <Route path='/comunidad' element = {<Comunidad/>}/>
+          <Route path="/Login" element={<Login/>}/>
+          <Route path="/Registro" element={<Registro/>}/>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </CartProvider>
   </React.StrictMode>
 )
+

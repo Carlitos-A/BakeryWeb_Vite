@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import '../styles/style.css';
+import { productos } from '../constantes/productos.js';
 import { masVendidos } from '../constantes/masVendidos';
 import { catalogoItems } from '../constantes/catalogoItems';
 import { CartProvider, useCart } from '../components/CartContext.jsx';
@@ -9,6 +10,7 @@ import { useParams, useNavigate } from "react-router-dom";
 
 
 export default function catalogo() {
+
     const { addToCart } = useCart();
     const navigate = useNavigate();
     const { categoria } = useParams();
@@ -26,8 +28,8 @@ export default function catalogo() {
 
     const productosFiltrados =
         categoriaSeleccionada === "Todos los productos"
-            ? masVendidos
-            : masVendidos.filter(
+            ? productos
+            : productos.filter(
                 (p) => p.category.toLowerCase() === categoriaSeleccionada.toLowerCase()
             );
 
@@ -39,7 +41,7 @@ export default function catalogo() {
 
 
         <div className="d-flex flex-column min-vh-100 bg-custom">
-            <Header />
+
 
             <div className="container my-5">
                 <div className="row">
@@ -121,8 +123,6 @@ export default function catalogo() {
                     </div>
                 </div>
             </div >
-
-            <Footer />
         </div >
     );
 }
