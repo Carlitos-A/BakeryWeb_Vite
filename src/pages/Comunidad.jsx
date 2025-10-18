@@ -8,8 +8,6 @@ export default function Comunidad() {
   return (
     <div className="d-flex flex-column min-vh-100 bg-custom">
 
-      <Header />
-
       <main className="flex-grow-1">
 
         <div
@@ -80,7 +78,6 @@ export default function Comunidad() {
       </main>
 
 
-      <Footer />
     </div>
   );
 }

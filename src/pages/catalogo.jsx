@@ -41,7 +41,7 @@ export default function catalogo() {
 
 
         <div className="d-flex flex-column min-vh-100 bg-custom">
-            <Header />
+
 
             <div className="container my-5">
                 <div className="row">
@@ -123,8 +123,6 @@ export default function catalogo() {
                     </div>
                 </div>
             </div >
-
-            <Footer />
         </div >
     );
 }

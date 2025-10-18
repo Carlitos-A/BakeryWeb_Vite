@@ -6,7 +6,6 @@ import '../styles/style.css';
 export default function Equipo() {
   return (
     <div className="d-flex flex-column min-vh-100 bg-custom">
-      <Header />
 
       <main className="flex-grow-1">
 
@@ -42,7 +41,6 @@ export default function Equipo() {
 
       </main>
 
-      <Footer />
     </div>
   );
 }

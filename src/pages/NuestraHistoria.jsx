@@ -6,7 +6,6 @@ import '../styles/style.css';
 export default function NuestraHistoria() {
   return (
     <div className="d-flex flex-column min-vh-100 bg-custom">
-      <Header />
 
       <main className="flex-grow-1">
         <section className="container-fluid my-5">
@@ -117,7 +116,6 @@ export default function NuestraHistoria() {
         </section>
       </main>
 
-      <Footer />
     </div>
   );
 }

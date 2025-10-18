@@ -1,14 +1,19 @@
+
+
+import Header from '../components/header'
+import Footer from '../components/footer'
+import '../styles/style.css'
+import Registro from '../pages/Registro.jsx'
+import { masVendidos } from '../constantes/masVendidos'
+import { reviews } from '../constantes/reviews'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 import React, { useState, useEffect } from 'react';
-import Header from '../components/header';
-import Footer from '../components/footer';
-import '../styles/style.css';
-import { masVendidos } from '../constantes/masVendidos';
-import { reviews } from '../constantes/reviews';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import EmblaCarousel from '../components/EmblaCarousel';
-import '../styles/embla.css';
+import EmblaCarousel from '../components/EmblaCarousel'
+import '../styles/embla.css'
+import { Link } from 'react-router-dom'
+
 
 
 export default function App() {
@@ -20,7 +25,6 @@ export default function App() {
 
   return (
     <div className="d-flex flex-column min-vh-100">
-      <Header />
 
       {/* Hero */}
       <div
@@ -60,7 +64,7 @@ export default function App() {
                 recíbelo en la comodidad de tu hogar.
               </p>
               <div className="text-center">
-                <a href="register.html" className="btn btn-color btn-lg">
+                <a href="Registro" className="btn btn-color btn-lg">
                   Registrarse
                 </a>
               </div>
@@ -93,8 +97,7 @@ export default function App() {
 
         <hr />
       </main>
+    </div >
+  )
 
-      <Footer />
-    </div>
-  );
 }
